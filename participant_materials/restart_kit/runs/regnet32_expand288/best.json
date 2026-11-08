@@ -1,0 +1,7 @@
+{
+  "epoch": 5,
+  "variant": "ema_fixed_final",
+  "select_logloss": null,
+  "accuracy": null,
+  "selection_policy": "predetermined last epoch; no validation selection"
+}

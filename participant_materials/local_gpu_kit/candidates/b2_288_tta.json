@@ -1,0 +1,12 @@
+{
+  "models": [
+    {
+      "arch": "b2",
+      "size": 288,
+      "checkpoint_source": "C:\\Users\\ehdal\\OneDrive\\Desktop\\AI_challenge\\participant_materials\\local_gpu_kit\\runs\\b2_288\\best_model.pt",
+      "temperature": 1.033350627077057,
+      "tta": true,
+      "weight": 1.0
+    }
+  ]
+}

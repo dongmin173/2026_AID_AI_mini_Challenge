@@ -1,0 +1,22 @@
+{
+  "arch": "regnet32",
+  "size": 288,
+  "tta": "none",
+  "temperature": 0.9354923821126471,
+  "checkpoint": "model.pt",
+  "model_sha256": "85107b56aae2be249e292e6a2d9979982244dcb454dab3d3c619e605e84dd3ba",
+  "params": 17926364,
+  "class_to_idx": {
+    "6e": 0,
+    "it": 1
+  },
+  "torch": "2.10.0+cu128",
+  "torchvision": "0.25.0+cu128",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pillow": "13.0.0",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1"
+  },
+  "transform": "full-image-square-resize/ImageNet-normalization/EXIF-transpose"
+}

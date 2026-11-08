@@ -1,0 +1,11 @@
+{
+  "arch": "b2",
+  "size": 288,
+  "seed": 42,
+  "num_params": 7703812,
+  "best_val_loss": 0.036504897431578115,
+  "epoch_saved": 5,
+  "train_count": 2324,
+  "val_count": 582,
+  "init_file": "ImageNet pretrained"
+}

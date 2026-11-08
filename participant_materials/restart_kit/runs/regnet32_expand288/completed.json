@@ -1,0 +1,4 @@
+{
+  "epochs": 5,
+  "policy": "fixed_final_ema"
+}

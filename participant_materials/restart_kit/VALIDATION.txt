@@ -1,0 +1,36 @@
+검증 범위
+
+- Python 3.12, torch 2.10.0+cpu, torchvision 0.25.0+cpu에서 점검했습니다.
+- 모든 .py 파일의 문법 검사 통과.
+- 실제 RegNetY-3.2GF 구조로 합성 train 이미지 101장을 고정 분할했습니다.
+- 동일 픽셀 중복 이미지가 같은 분할에 배정됨을 확인했습니다.
+- 출력층 warmup 1 epoch + 전체 모델 학습 1 epoch를 CPU/64px로 실행했습니다.
+- 별도 calibration 온도 최적화, 선택 고정 후 audit 평가를 실행했습니다.
+- 생성된 ZIP을 새 폴더에 추출해 합성 test 이미지 500장을 CPU 추론했습니다.
+- 다른 프로세스에서 외부 socket 접속을 막고 다시 추론했으며 CSV 바이트가 완전히 동일했습니다.
+- 데이터 내용 변경 시 재학습 전 오류가 발생함을 확인했습니다.
+- IT=1 확률 매핑, TTA의 확률 평균, 온도 적용 수식을 확인했습니다.
+- 기본 입력 224x224에서 regnet32, regnet16, b0 모두 (2,2) 출력 및 유한값 확인.
+- 파라미터: regnet32 17,926,364 / regnet16 10,315,208 / b0 4,010,110.
+
+제한
+
+실제 대회 이미지의 바이트와 사용자의 RTX 3070 Ti에는 접근하지 않았습니다.
+합성 데이터 실행은 코드 흐름 검증이며 정확도 또는 Log Loss 성능 검증이 아닙니다.
+합성 64px CPU 실행 시간을 실제 224px 대회 추론 시간으로 사용할 수 없습니다.
+ImageNet 다운로드와 CUDA AMP 학습 경로는 사용자 환경에서 실행해야 합니다.
+Google Colab CPU의 500장/600초 조건 및 Public/Private 점수는 미검증입니다.
+
+사용자에게 제공하는 ZIP에는 합성 이미지, 임의 가중치, 검증용 CSV가 들어 있지 않습니다.
+실제 학습 후 make_package.py로 만든 ZIP만 대회 최종 제출용입니다.
+
+FP16 non-finite gradient 오류 수정 (2026-11-07)
+
+- 기본 학습 정밀도를 FP32로 변경하고 --precision fp32/fp16 옵션을 추가했습니다.
+- 선택적 FP16에서 비정상 gradient norm이면 optimizer 업데이트를 생략하고 scale을 낮춥니다.
+- FP32의 non-finite 검사는 유지했습니다.
+- CPU GradScaler에서 Inf gradient를 주입해 가중치와 AdamW 상태가 변경되지 않음을 확인했습니다.
+- 다음 정상 gradient에서 업데이트가 재개됨을 확인했습니다.
+- 개별 gradient는 유한하지만 전체 L2 norm이 overflow하는 경우도 업데이트가 생략됨을 확인했습니다.
+- 수정된 RegNetY 학습 코드를 CPU/합성 데이터/64px에서 2 epoch 실행했습니다.
+- 실제 RTX 3070 Ti CUDA 경로는 여기에서 실행하지 못했습니다.

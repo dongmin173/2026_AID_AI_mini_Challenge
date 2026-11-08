@@ -1,0 +1,29 @@
+{
+  "source_run": "C:\\Users\\ehdal\\OneDrive\\Desktop\\AI_challenge\\participant_materials\\restart_kit\\runs\\regnet32_fp32",
+  "source_model_sha256": "139eac56a798ce6606995c454442b029b59ccdf463f16b081ddaa132a2cdaa7c",
+  "weights_updated": false,
+  "policy": "TTA chosen by select loss at T=1; chosen mode's T fit on calibration in [0.75,2.0]; audit/test never choose settings",
+  "calibration_score_is_fit_score": true,
+  "comparison": [
+    {
+      "tta": "none",
+      "select_T1_logloss": 0.016896675879268904,
+      "select_T1_accuracy": 0.9965635738831615,
+      "calibration_T1_logloss": 0.013238961355597717,
+      "fitted_temperature": 0.9310484242850668,
+      "calibration_fitted_logloss": 0.013163334525020878
+    },
+    {
+      "tta": "hflip",
+      "select_T1_logloss": 0.01851390619085673,
+      "select_T1_accuracy": 0.9965635738831615,
+      "calibration_T1_logloss": 0.01641442446787858,
+      "fitted_temperature": 0.9917700100924057,
+      "calibration_fitted_logloss": 0.016413415111381217
+    }
+  ],
+  "chosen_tta": "none",
+  "chosen_temperature": 0.9310484242850668,
+  "temperature_near_bound": false,
+  "note": "Calibration improvement is an in-sample fit result, not independent evidence of better generalization."
+}

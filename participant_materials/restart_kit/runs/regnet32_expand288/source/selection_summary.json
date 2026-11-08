@@ -1,0 +1,13 @@
+{
+  "selected": {
+    "epoch": 5,
+    "variant": "ema_fixed_final",
+    "select_logloss": null,
+    "accuracy": null,
+    "selection_policy": "predetermined last epoch; no validation selection"
+  },
+  "ema_decay": 0.99,
+  "training_count": 2324,
+  "init_checkpoint": "runs\\regnet32_ema288\\model.pt",
+  "note": "Former select is TRAIN data. Its scores are no longer independent validation. Calibration/audit were excluded."
+}

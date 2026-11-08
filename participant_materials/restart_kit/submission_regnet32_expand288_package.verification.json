@@ -1,0 +1,8 @@
+{
+  "local_cpu_seconds": 44.89357870000822,
+  "params": 17926364,
+  "zip_bytes": 134757417,
+  "csv_sha256": "c17babd24d8a8875df1994401e5ad83831c0dd9007ad90947957038253cbecd5",
+  "zip_sha256": "973a5bb9f18785a5af92afcd1f45be17456008a71260341ff5fbfb36339d5ca5",
+  "colab_600_seconds_verified": false
+}

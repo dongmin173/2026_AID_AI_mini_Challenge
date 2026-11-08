@@ -1,0 +1,8 @@
+{
+  "audit_n": 291,
+  "audit_logloss": 0.010125019551753848,
+  "audit_accuracy": 0.9965635738831615,
+  "wrong_count": 1,
+  "top5_fraction_of_loss": 0.955661725767436,
+  "note": "Small holdout; not a guarantee of Public/Private performance. No tuning on audit."
+}

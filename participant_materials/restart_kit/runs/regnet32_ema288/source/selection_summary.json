@@ -1,0 +1,24 @@
+{
+  "selected_variant": "raw",
+  "selected": {
+    "epoch": 7,
+    "variant": "raw",
+    "select_logloss": 0.008885615252246291,
+    "accuracy": 0.9965635738831615
+  },
+  "variant_best": {
+    "raw": {
+      "epoch": 7,
+      "select_logloss": 0.008885615252246291,
+      "accuracy": 0.9965635738831615
+    },
+    "ema": {
+      "epoch": 3,
+      "select_logloss": 0.009926472932392408,
+      "accuracy": 0.9965635738831615
+    }
+  },
+  "ema_decay": 0.99,
+  "bn_statistics_source": "train split only; eval transform; fixed shuffled batches",
+  "note": "Only model.pt is deployed. raw_best.pt and ema_best.pt are training diagnostics, not an ensemble."
+}

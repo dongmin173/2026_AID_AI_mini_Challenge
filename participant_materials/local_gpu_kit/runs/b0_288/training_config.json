@@ -1,0 +1,11 @@
+{
+  "arch": "b0",
+  "size": 288,
+  "seed": 42,
+  "num_params": 4010110,
+  "best_val_loss": 0.02964440376647425,
+  "epoch_saved": 8,
+  "train_count": 2324,
+  "val_count": 582,
+  "init_file": "..\\baseline_model.pt"
+}

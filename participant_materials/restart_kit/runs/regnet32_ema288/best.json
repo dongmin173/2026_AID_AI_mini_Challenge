@@ -1,0 +1,6 @@
+{
+  "epoch": 7,
+  "variant": "raw",
+  "select_logloss": 0.008885615252246291,
+  "accuracy": 0.9965635738831615
+}

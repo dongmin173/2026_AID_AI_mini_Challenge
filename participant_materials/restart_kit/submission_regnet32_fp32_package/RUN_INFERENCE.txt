@@ -1,0 +1,9 @@
+Offline CPU reproduction (no weight downloads):
+python predict.py --test_dir PATH_TO_TEST --output submission.csv
+
+Train code: train.py, model.py, data.py; exact options: training_config.json.
+Split identities and input checksums: splits.json.
+Only model.pt is used for inference. If initial_model.pt is included,
+it is training initialization only, NOT an ensemble member.
+Class 6e=0, it=1. Matching framework versions are recorded.
+Measure the full command on Google Colab CPU before final submission.

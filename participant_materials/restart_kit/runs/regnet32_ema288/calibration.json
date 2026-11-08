@@ -1,0 +1,7 @@
+{
+  "calibration_used": true,
+  "raw_logloss": 0.017047336532841604,
+  "final_logloss": 0.01594506795599771,
+  "accuracy": 0.993127147766323,
+  "temperature": 1.3100463964846691
+}

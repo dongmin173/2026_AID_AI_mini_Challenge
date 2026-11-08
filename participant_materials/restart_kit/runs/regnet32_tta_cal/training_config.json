@@ -1,0 +1,37 @@
+{
+  "command": "fit",
+  "data": "..",
+  "splits": "splits.json",
+  "out": "runs\\regnet32_fp32",
+  "arch": "regnet32",
+  "size": 224,
+  "epochs": 20,
+  "warmup": 1,
+  "batch": 8,
+  "workers": 0,
+  "lr": 5e-05,
+  "head_lr": 0.0005,
+  "seed": 20261107,
+  "tta": "none",
+  "device": "cuda",
+  "precision": "fp32",
+  "init": "runs\\regnet32_224\\initial_model.pt",
+  "num_params": 17926364,
+  "init_origin": "runs\\regnet32_224\\initial_model.pt",
+  "counts": {
+    "train": 2033,
+    "select": 291,
+    "calibration": 291,
+    "audit": 291
+  },
+  "python": "3.12.10",
+  "torch": "2.10.0+cu128",
+  "torchvision": "0.25.0+cu128",
+  "cuda": "12.8",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pillow": "13.0.0",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1"
+  }
+}

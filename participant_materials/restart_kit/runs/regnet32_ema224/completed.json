@@ -1,0 +1,4 @@
+{
+  "epochs": 20,
+  "best_select_logloss": 0.016411263189176826
+}

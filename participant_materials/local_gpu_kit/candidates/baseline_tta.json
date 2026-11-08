@@ -1,0 +1,12 @@
+{
+  "models": [
+    {
+      "arch": "b0",
+      "size": 224,
+      "checkpoint_source": "C:\\Users\\ehdal\\OneDrive\\Desktop\\AI_challenge\\participant_materials\\baseline_model.pt",
+      "temperature": 1.032436635407596,
+      "tta": true,
+      "weight": 1.0
+    }
+  ]
+}

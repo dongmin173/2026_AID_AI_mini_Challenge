@@ -1,0 +1,6 @@
+{
+  "epoch": 18,
+  "variant": "ema",
+  "select_logloss": 0.016411263189176826,
+  "accuracy": 0.9965635738831615
+}
