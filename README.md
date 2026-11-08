@@ -1,4 +1,4 @@
-/restart_kit
+participant_materials/restart_kit
 # AI Mini Challenge 제출 모델
 
 ## 모델 및 학습 방식
